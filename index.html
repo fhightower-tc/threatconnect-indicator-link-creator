@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <title>Indicator Link Creator</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="./js/lib/threatconnect.js"></script>
+</head>
+<body>
+    <button onclick="INDICATORLINKCREATOR.getAssociatedIndicators()">Click to create links</button>
+
+    <div id="link-panel" v-if="seen">
+      <indicator-link v-for="indicator in indicatorArray" v-bind:indicator="indicator"></indicator-link>
+    </div>
+
+    <script type="text/javascript" src="./js/indicatorLinkCreator.js"></script>
+</body>
+</html>
